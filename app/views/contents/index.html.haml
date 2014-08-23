@@ -1,0 +1,6 @@
+#content
+  .title
+    %h1= "Content"
+    - @contents.each do |c|
+      %p "#{c.name}"
+      %p "#{c.post}"
