@@ -45,3 +45,5 @@ gem 'rails_12factor'
 # gem 'debugger', group: [:development, :test]
 
 gem 'pg'
+
+gem 'omniauth-twitter'
