@@ -2,6 +2,39 @@
 
 * \c social_development
 
+http://cheetah.blast.development.c66.me/
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+<h2>CLOUD 66 INFO</h2>
+cx executable is in /usr/local/bin
+
+cx redeploy -s blast
+
+Usage: cx <command> [-s stack] [-e environment] [options] [arguments]
+
+
+Commands:
+
+    stacks           list stacks
+    redeploy         redeploys stack
+    open             opens the web browser to visit the app served by the stack
+    settings         lists stack settings
+    set              sets the value of a setting on a stack
+    server-settings  lists server settings
+    server-set       sets the value of a setting on a server
+    env-vars         lists environement variables
+    env-vars-set     sets the value of an environment variable on a stack
+    lease            leases firewall access to the given server on the stack
+    restart          restarts the stack.
+    run              executes a command directly on the server
+    servers          lists all the servers of a stack.
+    ssh              starts a ssh shell into the server
+    tail             shows and tails the logfile specified on the given server
+    upload           copies a file from your local computer to the remote server
+    download         copies a file from the remote server to your local computer
+    backups          lists all the managed backups of a stack
+    download-backup  downloads a database backup
+    clear-caches     clears all existing stack code caches
+    version          show cx version
+    info             shows information about your account, toolbelt and the current directory or the specified stack
+logout
