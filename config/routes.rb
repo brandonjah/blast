@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  # get 'content/index'
   resources :contents
-  root to: 'contents#index'
+
+  resources :tweets, only: [:new, :create]
+
   get "/auth/:provider/callback" => "sessions#create"
-  get "/signout" => "sessions#destroy", :as => :signout  
+  get 'auth/failure', to: redirect('/')
+  get "/signout" => "sessions#destroy", :as => :signout
+
+  root to: 'contents#index'
 end

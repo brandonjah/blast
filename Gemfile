@@ -47,3 +47,6 @@ gem 'rails_12factor'
 gem 'pg'
 
 gem 'omniauth-twitter'
+gem 'twitter', '~> 5.3.1'
+
+gem 'delayed_job_active_record'

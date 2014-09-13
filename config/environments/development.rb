@@ -34,4 +34,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.twitter_key = ENV["TWITTER_KEY"]
+  config.twitter_secret = ENV["TWITTER_SECRET"]  
 end
