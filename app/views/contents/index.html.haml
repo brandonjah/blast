@@ -3,9 +3,7 @@
     %div
       Signed in as #{current_user.name}   #{link_to "Sign out", signout_path}
     %div 
-      = form_for :tweet, url: tweets_path, remote: true, method: :post do |f|
-        = f.text_field :message
-        = f.submit "Send Tweet"
+      = render "tweets/send_tweet"
   - else
     = link_to "Sign in with Twitter", "/auth/twitter"
 

@@ -40,3 +40,21 @@ Commands:
     version          show cx version
     info             shows information about your account, toolbelt and the current directory or the specified stack
 logout
+
+<h4>Delayed job - Cloud66</h4>
+Procfile in root of application starts the worker
+
+<h4>Connecting to servers Cloud66</h4>
+
+Connect to PSQL:
+<pre>
+cx ssh -s blast Cheetah
+sudo -u postgres psql
+</pre>
+
+
+Run migration:
+<pre>
+cd $STACK_PATH
+bundle exec rake db:migrate
+</pre>

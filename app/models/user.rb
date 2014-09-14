@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :tweets
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider 
@@ -21,5 +23,6 @@ class User < ActiveRecord::Base
     
     client.update(tweet)
   end
-  handle_asynchronously :tweet, :run_at => Proc.new { 5.minutes.from_now }
+  # handle_asynchronously :tweet, :run_at => Proc.new { 5.minutes.from_now }
+  # handle_asynchronously :tweet, :run_at => Proc.new { @@user.tweet.post_time }
 end
