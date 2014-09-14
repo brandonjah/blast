@@ -11,5 +11,6 @@
   .title
     %h1= "Content"
     - @contents.each do |c|
-      %p "#{c.name}"
-      %p "#{c.post}"
+      %p "Name: #{c.name}"
+      %p "Message: #{c.post}"
+      %hr

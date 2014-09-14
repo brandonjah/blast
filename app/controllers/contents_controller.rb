@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
   def index
-  	@contents = Content.all
+  	@contents = Content.all.to_a
   end
 
   def new
@@ -20,7 +20,7 @@ class ContentsController < ApplicationController
 	private
 
 	def content_params
-	  params.require(:content).permit(:name, :post)
+	  params.require(:content).permit(:name, :post, :post_time)
 	end
 
 end
