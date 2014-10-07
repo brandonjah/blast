@@ -3,11 +3,11 @@ class TweetsController < ApplicationController
   end
 
   def create
-    current_user.tweet(twitter_params[:message],current_user.uid)
-    Tweet.create(twitter_params)
+  	tweet = Tweet.create(twitter_params)
+    current_user.tweet(tweet,current_user.uid)
   end
 
   def twitter_params
-    params.require(:tweet).permit(:message, user_attributes: [:id], content_attributes: [:id])
+    params.require(:tweet).permit(:message, :user_id, content_attributes: [:id, :name])
   end
 end

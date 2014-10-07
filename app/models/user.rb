@@ -21,12 +21,12 @@ class User < ActiveRecord::Base
       config.access_token_secret = user.oauth_secret
     end
     
-    client.update(tweet)
+    # client.update(tweet)
+    client.delay(run_at: tweet.content.post_time).update(tweet.message)
   end
 
   def self.when_to_run
-    self.tweets.last.post_time
   end
   # handle_asynchronously :tweet, :run_at => Proc.new { 5.minutes.from_now }
-  handle_asynchronously :tweet, :run_at => Proc.new { when_to_run }
+  # handle_asynchronously :tweet, :run_at => Proc.new { when_to_run }
 end
