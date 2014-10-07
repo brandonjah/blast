@@ -23,6 +23,10 @@ class User < ActiveRecord::Base
     
     client.update(tweet)
   end
+
+  def self.when_to_run
+    self.tweets.last.post_time
+  end
   # handle_asynchronously :tweet, :run_at => Proc.new { 5.minutes.from_now }
-  # handle_asynchronously :tweet, :run_at => Proc.new { @@user.tweet.post_time }
+  handle_asynchronously :tweet, :run_at => Proc.new { when_to_run }
 end
