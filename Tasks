@@ -1,4 +1,4 @@
 TASK LIST
 
-- contents not saving in the db correctly?
-- post time not saving, post not saving on content
+- test to see that tweets are actually sent when scheduled
+- add validation for required fields
