@@ -1,11 +1,4 @@
 TASK LIST
 
-- tweet needs to associate to content, user
-- delayed job working on server
-
-- fix associations User.tweets or User.contents doesn't work
-
-Processing by TweetsController#create as JS
-  Parameters: {"utf8"=>"✓", "tweet"=>{"message"=>"run at 8:30 on 10/6", "user"=>{"id"=>""}, "content"=>{"name"=>"9"}}, "commit"=>"Send Tweet"}
-  User Load (0.5ms)  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
-Unpermitted parameters: user, content
+- contents not saving in the db correctly?
+- post time not saving, post not saving on content

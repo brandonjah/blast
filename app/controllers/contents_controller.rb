@@ -1,6 +1,7 @@
 class ContentsController < ApplicationController
   def index
   	@contents = Content.all.to_a
+    @tweet = Tweet.new
   end
 
   def new
@@ -8,8 +9,12 @@ class ContentsController < ApplicationController
   end
 
   def create
-  	@content = Content.create(content_params)
-  	redirect_to contents_path
+  	@content = Content.new(content_params)
+    if @content.save
+      respond_to do |format|
+         format.html {redirect_to contents_path}
+      end
+    end
   end
 
   def update

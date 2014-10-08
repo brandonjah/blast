@@ -1,6 +1,6 @@
 class Tweet < ActiveRecord::Base
 	belongs_to :user
-	has_one :content
+	belongs_to :content
 
 	accepts_nested_attributes_for :content
 end
