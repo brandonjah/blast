@@ -5,4 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Identity.create!(name:"blastadmin2",email:"admin@socialblast.com",password:"simplepw",password_confirmation:"simplepw")
+Identity.create!(name:"blastadmin",email:"admin@socialblast.com",password:ENV['ADMIN_PW'],password_confirmation:ENV['ADMIN_PW'])
