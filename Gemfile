@@ -47,4 +47,6 @@ gem 'pg'
 gem 'omniauth-twitter'
 gem 'twitter', '~> 5.3.1'
 
+gem 'omniauth-identity'
+
 gem 'delayed_job_active_record'

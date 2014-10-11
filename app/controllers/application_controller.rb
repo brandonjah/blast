@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :user_signed_in?
   helper_method :correct_user?
+  helper_method :admin_user?
 
   private
     def current_user
@@ -26,6 +27,13 @@ class ApplicationController < ActionController::Base
         redirect_to root_url, :alert => "Access denied."
       end
     end
+
+    def admin_user?
+      puts "current_user: #{current_user.inspect}"
+      if current_user
+        current_user.provider == "identity" ? true : false
+      end
+    end    
 
     def authenticate_user!
       if !current_user

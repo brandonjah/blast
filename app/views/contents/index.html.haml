@@ -4,6 +4,11 @@
       Signed in as #{current_user.name}   #{link_to "Sign out", signout_path}
     %div 
       = render "tweets/send_tweet"
+    %div
+      - if admin_user?
+        %p "true"
+      -else
+        %p "false"
   - else
     = link_to "Sign in with Twitter", "/auth/twitter"
 

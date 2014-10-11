@@ -22,12 +22,6 @@ class User < ActiveRecord::Base
     end
     
     # client.update(tweet)
-    # .to_time
-    puts "tweet content: #{tweet.content.inspect}"
-    puts "content post time: #{tweet.content.post_time}"
-    puts "content post time type: #{tweet.content.post_time.class} then inspection #{tweet.content.post_time.inspect}"
-    puts "class of 5 minutes from now: #{5.minutes.from_now.class} then inspection #{5.minutes.from_now.inspect}"
-    puts "and the message: #{tweet.message}"
     client.delay(run_at: tweet.content.post_time).update(tweet.message)
   end
 
