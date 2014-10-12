@@ -4,6 +4,18 @@ class ContentsController < ApplicationController
     @tweet = Tweet.new
   end
 
+  def landing_page
+    @tweet = Tweet.new
+    if params[:landing_page]
+      @landing_page = params[:landing_page]
+      @content = Content.find_by(name: params[:landing_page])
+    else
+      flash[:alert] = "Didn't find content"
+      @content = Content.new
+    end
+    render layout: "landing_page"
+  end
+
   def new
   	@content = Content.new
   end

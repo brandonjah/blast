@@ -1,0 +1,4 @@
+= simple_form_for @tweet, url: tweets_path, remote: true, method: :post do |f|
+  = f.input :content_id, as: :hidden, input_html: { value: @content.id }
+  = f.input :user_id, as: :hidden, input_html: { value: current_user.id }
+  = f.submit "Schedule Tweet"
