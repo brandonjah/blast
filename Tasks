@@ -1,6 +1,6 @@
 TASK LIST
 
-- build landing page, find content by name so /xxxx finds content with name of xxxx
+- sign in with twitter sends them back to the page they were on
 
 - test to see that tweets are actually sent when scheduled
 - add validation for required fields

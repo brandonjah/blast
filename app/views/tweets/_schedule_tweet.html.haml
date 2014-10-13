@@ -6,5 +6,5 @@
 - else
 	%p
 		Please
-		= link_to "Sign in with Twitter", "/auth/twitter"
+		= link_to "Sign in with Twitter", "/auth/twitter?origin=#{request.original_url}"
 		to share the tweet
