@@ -30,6 +30,11 @@ class ContentsController < ApplicationController
       respond_to do |format|
          format.html {redirect_to contents_path}
       end
+    else
+      flash[:error] = "Failed Validation"
+      respond_to do |format|
+         format.html {redirect_to new_content_path}
+      end
     end
   end
 

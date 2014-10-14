@@ -29,7 +29,6 @@ class ApplicationController < ActionController::Base
     end
 
     def admin_user?
-      puts "current_user: #{current_user.inspect}"
       if current_user
         current_user.provider == "identity" ? true : false
       end
