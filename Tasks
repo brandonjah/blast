@@ -4,3 +4,8 @@ TASK LIST
 
 - test to see that tweets are actually sent when scheduled
 - add validation for required fields
+
+
+IDEAS
+
+- add email signup to notify users of similar events (categorize events like 'music', 'los angeles')

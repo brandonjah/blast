@@ -1,0 +1,79 @@
+/ Navigation
+%nav.navbar.navbar-custom.navbar-fixed-top{:role => "navigation"}
+  .container
+    .navbar-header
+      %button.navbar-toggle{"data-target" => ".navbar-main-collapse", "data-toggle" => "collapse", :type => "button"}
+        %i.fa.fa-bars
+      %a.navbar-brand.page-scroll{:href => "#page-top"}
+        %i.fa.fa-play-circle
+        %span.light ZANDER
+        BLECK
+    / Collect the nav links, forms, and other content for toggling
+    .collapse.navbar-collapse.navbar-right.navbar-main-collapse
+      %ul.nav.navbar-nav
+        / Hidden li included to remove active class from about link when scrolled up past about section
+        %li.hidden
+          %a{:href => "#page-top"}
+        %li
+          %a.page-scroll{:href => "#about"} About
+        %li
+          %a.page-scroll{:href => "#download"} Blast
+        %li
+          %a.page-scroll{:href => "#contact"} Contact
+    / /.navbar-collapse
+  / /.container
+/ Intro Header
+%header.intro
+  .intro-body
+    .container
+      .row
+        .col-md-8.col-md-offset-2
+          %h1.brand-heading
+            DEFAULT LANDING PAGE
+          %p.intro-text
+            Join The Rally!
+            %br>/
+            Created by Social Blast.
+          %a.btn.btn-circle.page-scroll{:href => "#about"}
+            %i.fa.fa-angle-double-down.animated
+/ About Section
+%section#about.container.content-section.text-center
+  .row
+    .col-lg-8.col-lg-offset-2
+      %h2 What's Happening?
+      %p On November 1st, Zander Bleck is releasing his brand new song, Gravity.
+      %p This is where we need your help by mobilizing with ##{@content.name} to tweet the following:
+      %p #{@content.post}
+      %blockquote.twitter-tweet{:align => "center", :lang => "en"}
+        %a{:href => "https://twitter.com/princeboucher/status/520991521043013632"} October 11, 2014
+      %script{:async => "", :charset => "utf-8", :src => "//platform.twitter.com/widgets.js"}
+/ Download Section
+%section#download.content-section.text-center
+  .download-section
+    .container
+      .col-lg-8.col-lg-offset-2
+        %h2 BLAST GRAVITY
+        %p You are authorizing us to schedule a Tweet on November 1st to promote Zander's new song: GRAVITY
+        = render "/tweets/schedule_tweet"
+        %a.btn.btn-default.btn-lg{:href => "http://startbootstrap.com/template-overviews/grayscale/"} Visit Blast Page
+/ Contact Section
+%section#contact.container.content-section.text-center
+  .row
+    .col-lg-8.col-lg-offset-2
+      %h2 Contact Social Blast
+      %p Feel free to email us to provide some feedback, or to start your own blast!
+      %p
+        %a{:href => "mailto:info@thinkandmaker.com"} info@thinkandmaker.com
+      %ul.list-inline.banner-social-buttons
+        %li
+          %a.btn.btn-default.btn-lg{:href => "https://twitter.com/followtheprince"}
+            %i.fa.fa-twitter.fa-fw
+            %span.network-name Twitter
+        %li
+          %a.btn.btn-default.btn-lg{:href => "https://github.com/princeboucher"}
+            %i.fa.fa-github.fa-fw
+            %span.network-name Github
+        %li
+          %a.btn.btn-default.btn-lg{:href => "https://plus.google.com/+princeboucher/posts"}
+            %i.fa.fa-google-plus.fa-fw
+            %span.network-name Google+

@@ -9,6 +9,10 @@ class ContentsController < ApplicationController
     if params[:landing_page]
       @landing_page = params[:landing_page]
       @content = Content.find_by(name: params[:landing_page])
+      if @content.nil? 
+        @landing_page = "default"
+        @content = Content.find_by(name: @landing_page)
+      end
     else
       flash[:alert] = "Didn't find content"
       @content = Content.new
