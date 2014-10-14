@@ -38,6 +38,14 @@ class ContentsController < ApplicationController
   	@content.update_attributes(content_params)
   end
 
+   def destroy
+    content = Content.find(params[:id])
+    content.destroy
+    respond_to do |format|
+       format.html {redirect_to contents_path}
+    end    
+   end  
+
 	private
 
 	def content_params

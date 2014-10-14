@@ -4,18 +4,16 @@
       Signed in as #{current_user.name}   #{link_to "Sign out", signout_path}
     %div 
       = render "tweets/send_tweet"
-    %div
-      - if admin_user?
-        %p "true"
-      -else
-        %p "false"
   - else
     = link_to "Sign in with Twitter", "/auth/twitter"
 
 #content
-  .title
-    %h1= "Content"
-    - @contents.each do |c|
-      %p "Name: #{c.name}"
-      %p "Message: #{c.post}"
-      %hr
+  - if admin_user?
+    .title
+      %h1= "Content"
+      - @contents.each do |c|
+        %p "Name: #{c.name}"
+        %p "Message: #{c.post}"
+        %p 
+          = link_to "Delete Content", c, method: :delete, data: {confirm: "You sure?"}
+        %hr
