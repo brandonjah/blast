@@ -1,5 +1,8 @@
-= simple_form_for @content do |f|
-  = f.input :name
-  = f.input :post
-  = f.input :post_time, as: :datetime
-  = f.button :submit
+- if admin_user?
+	= simple_form_for @content do |f|
+		= f.input :name
+		= f.input :post
+		= f.input :post_time, as: :datetime
+		= f.button :submit
+- else
+	%h3 Sign in to create content	  
