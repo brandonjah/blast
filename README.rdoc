@@ -2,7 +2,7 @@
 
 * \c social_development
 
-http://cheetah.blast.development.c66.me/
+http://blowfish.stage.staging.c66.me/
 
 <h4>run delayed jobs</h4>
 rake jobs:work
@@ -16,7 +16,7 @@ git push
 <h2>CLOUD 66 INFO</h2>
 cx executable is in /usr/local/bin
 
-cx redeploy -s blast
+cx redeploy -s stage
 
 Usage: cx <command> [-s stack] [-e environment] [options] [arguments]
 
@@ -54,7 +54,7 @@ Procfile in root of application starts the worker
 
 Connect to PSQL:
 <pre>
-cx ssh -s blast Cheetah
+cx ssh -s stage Blowfish
 sudo -u postgres psql
 </pre>
 
