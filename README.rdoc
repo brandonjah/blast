@@ -7,6 +7,12 @@ http://cheetah.blast.development.c66.me/
 <h4>run delayed jobs</h4>
 rake jobs:work
 
+<h2>GIT info</h2>
+git pull
+git add .
+git commit -am "this is a commit message"
+git push
+
 <h2>CLOUD 66 INFO</h2>
 cx executable is in /usr/local/bin
 

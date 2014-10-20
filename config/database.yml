@@ -24,6 +24,18 @@ development:
   <<: *default
   database: social_development
 
+staging:
+  <<: *default
+  database: social_development  
+
+
+production:
+  <<: *default
+  database: social_production
+  username: blast
+  password: <%= ENV['ADMIN_PW'] %>
+
+
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.

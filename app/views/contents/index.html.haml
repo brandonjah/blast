@@ -13,8 +13,9 @@
     .title
       %h1= "Content"
       - @contents.each do |c|
-        %p "Name: #{c.name}"
-        %p "Message: #{c.post}"
-        %p 
+        %p Name: #{c.name}
+        %p Message: #{c.post}
+        %p Post Time: #{c.post_time.strftime("%m/%d/%Y at %I:%M%p") }
+        %p
           = link_to "Delete Content", c, method: :delete, data: {confirm: "You sure?"}
         %hr

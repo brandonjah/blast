@@ -9,5 +9,5 @@ Rails.application.routes.draw do
 
   match ':landing_page' => "contents#landing_page", :via => [:get], :defaults => { :landing_page => ':landing_page' }
 
-  root to: 'contents#index'
+  root to: 'pages#home'
 end
