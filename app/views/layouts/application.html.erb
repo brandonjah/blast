@@ -64,8 +64,10 @@
         </div>
         <div class="col-lg-3">
           <div class="well sidebar-nav">
-            <h3>Admin User</h3>
-            <%= render "identities/login" %>
+            <% unless admin_user? %>
+              <h3>Admin User</h3>
+              <%= render "identities/login" %>
+            <% end %>
             <% if admin_user? %>
               <%= render "identities/register" %>
             <% end %>

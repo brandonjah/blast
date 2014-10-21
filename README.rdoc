@@ -3,6 +3,7 @@
 * \c social_development
 
 http://blowfish.stage.staging.c66.me/
+http://bobcat.blast.c66.me/
 
 <h4>run delayed jobs</h4>
 rake jobs:work
@@ -55,6 +56,7 @@ Procfile in root of application starts the worker
 Connect to PSQL:
 <pre>
 cx ssh -s stage Blowfish
+cx ssh -s blast Bobcat
 sudo -u postgres psql
 </pre>
 
