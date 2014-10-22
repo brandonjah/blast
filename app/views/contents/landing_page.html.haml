@@ -1,2 +1,5 @@
-#content
-  = render "/contents/name/#{@landing_page}"
+- if @content
+	- content_for :head do
+		= stylesheet_link_tag "landing_pages/#{@content.name}"
+		#content
+			= render "/contents/name/#{@landing_page}"
