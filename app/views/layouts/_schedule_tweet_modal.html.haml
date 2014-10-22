@@ -13,4 +13,5 @@
         %p 
           = @schedule_tweet_post_time
       .modal-footer
-        = render 'tweets/schedule_tweet_form'
+        = render 'tweets/schedule_tweet_form' if current_user && !admin_user?
+        = link_to "Sign out", signout_path if admin_user?
