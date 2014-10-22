@@ -3,11 +3,13 @@
     .modal-content
       .modal-header
         %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
-        %h4.modal-title 
-          = @schedule_tweet_title
+        %h4.modal-title
+          = "##{@schedule_tweet_title} via blast.social!"
       .modal-body
+        %h5 You are agreeing to send out a tweet using your account with this post content:
         %p 
           = @schedule_tweet_post
+        %h5 on this date and time:
         %p 
           = @schedule_tweet_post_time
       .modal-footer
