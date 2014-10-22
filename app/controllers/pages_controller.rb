@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-	layout "landing_page"
+	layout "home"
 	def home
 	end
 end
