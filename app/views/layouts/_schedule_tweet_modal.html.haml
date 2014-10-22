@@ -1,0 +1,14 @@
+#send-tweet-modal.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+        %h4.modal-title 
+          = @schedule_tweet_title
+      .modal-body
+        %p 
+          = @schedule_tweet_post
+        %p 
+          = @schedule_tweet_post_time
+      .modal-footer
+        = render 'tweets/schedule_tweet_form'

@@ -1,0 +1,5 @@
+%h5 You are agreeing to send out a tweet
+= simple_form_for @tweet, url: tweets_path, remote: true, method: :post, html: { class: 'form-horizontal' } do |f|
+	= f.input :content_id, as: :hidden, input_html: { value: @content.id }
+	= f.input :user_id, as: :hidden, input_html: { value: current_user.id }
+	= f.button :submit, "Sign me up!", id: "schedule_tweet_button"
