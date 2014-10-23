@@ -6,9 +6,6 @@ production: # 1. Environment type
             do_initial_db_schema_load: false
             reserved_server_memory: 0 (default value)
             passenger_process_memory: 200 (default value)
-            nginx:
-                cors: true
-                perfect_forward_secrecy: true
 staging: # 1. Environment type
     rails: # 2. Application type
         configuration: # 4. Application specific configurations
@@ -17,7 +14,4 @@ staging: # 1. Environment type
             do_initial_db_schema_load: false
             reserved_server_memory: 0 (default value)
             passenger_process_memory: 200 (default value)
-            nginx:
-                cors: true
-                perfect_forward_secrecy: true
 
