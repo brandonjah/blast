@@ -1,5 +1,5 @@
 - if @content
 	- content_for :head do
-		= stylesheet_link_tag "landing_pages/#{@content.name}"
+		= stylesheet_link_tag "landing_pages/#{@content.name}", media: "all", "data-turbolinks-track" => true
 		#content
 			= render "/contents/name/#{@landing_page}"
