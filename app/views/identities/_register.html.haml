@@ -1,3 +1,4 @@
+%h3 Create Admin User
 = form_tag "/auth/identity/register" do
   - if @identity && @identity.errors.any?
     .error_messages
@@ -23,4 +24,7 @@
     = label_tag :password_confirmation
     %br/
     = password_field_tag :password_confirmation
-  .actions= submit_tag "Register"
+    %br/
+    %br/
+  %div
+    .actions= submit_tag "Register"
