@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   match 'auth/failure', to: redirect('/'), :via => [:get, :post]
   match "/signout" => "sessions#destroy", :as => :signout, :via => [:get, :post]
 
-  match ':landing_page' => "contents#landing_page", :via => [:get], :defaults => { :landing_page => ':landing_page' }
+  match ':landing_page' => "contents#landing_page", :as => "landing_page", :via => [:get], :defaults => { :landing_page => ':landing_page' }
 
   root to: 'pages#home'
 end

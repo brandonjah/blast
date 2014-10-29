@@ -13,5 +13,6 @@
  *= require bootstrap_and_overrides
  *= require identities
  *= require contents
+ *= require base_classes
  *= require_self
  */
