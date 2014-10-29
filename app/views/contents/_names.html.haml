@@ -1,0 +1,4 @@
+#example-content.dn
+	- @contents.each do |c|
+		.content-link
+			= link_to c.name, landing_page_url(c.name)
