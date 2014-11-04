@@ -1,0 +1,160 @@
+<style type="text/css">
+  
+  body{
+    background-color: #0277BD;
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
+  }
+  p {
+    font-size:14px;
+  }
+  a{
+    color: #000000;
+  }
+  #wrapper{ 
+    width: 85%;
+    margin: 0 auto 0;
+    padding:0;
+  }
+  #message{
+    margin: 0 auto 0;
+    margin-top: 14%;
+    min-width: 200px;
+    padding: 40px;
+    padding-bottom: 48px;
+    width: 50%;
+    background-color: #ffffff;
+    text-align: center;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    color: #444;
+    -moz-box-shadow:    0px 6px 12px 0px rgba(0,0,0,0.15);
+    box-shadow:         0px 6px 12px 0px rgba(0,0,0,0.15);
+  }
+  .url{
+    color: #12A0E5;
+  }
+  #stats{
+    text-align: center;
+    font-size: 36px;
+    color: #ffffff;
+    padding-top: 12px;
+    opacity: .8;
+  }
+  h1{
+    font-size:164px;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    font-weight:900;
+  }
+  h2{
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-style:italic;
+    font-size: 36px;
+  }
+  #cta{
+    margin-top: 48px;
+  }
+  .button{
+    width: 360px;
+    background-color: #FFFFFF;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    margin: 0 auto 0;
+    border-radius: 16px;
+    -moz-box-shadow:    0px 12px 24px 0px rgba(0,0,0,0.15), 0px 6px 12px 0px rgba(0,0,0,0.15), inset 0px -2px 0px 0px #DFE1E3;
+    box-shadow:         0px 12px 24px 0px rgba(0,0,0,0.15), 0px 6px 12px 0px rgba(0,0,0,0.15), inset 0px -2px 0px 0px #DFE1E3;
+    color: #444;
+    text-decoration: none !important;
+  }
+  .button:hover{
+    background-color: #ddd;
+  }
+  a{
+    text-decoration: none;
+  }
+  h4{
+    font-size: 16px;
+    font-weight: 900;
+    padding: 20px;
+    position: relative;
+    left: 12px;
+  }
+  .example{
+    padding-top: 21px;
+    margin-left: 16px;
+    float: left;
+    opacity: .3;
+  }
+  #footer{
+    color: #ffffff;
+    position: absolute;
+    bottom: 10px;
+    width: 85%;
+    margin: 0 auto 0;
+    font-size: 10px;
+    opacity: .4;
+    font-weight: 300;
+    text-align: center;
+  }
+  .bold{
+    opacity: 1 !important;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  svg {
+    float:left;
+    margin-left: 72px;
+    margin-top: 14px;
+    fill: #12A0E5;
+  }
+
+	.button {
+		height: 150px;
+		padding-top: 15px;
+	}
+
+
+@media all and (min-width: 960px) {
+    body{
+        font-size: 30px;
+    }
+}
+ 
+@media all and (max-width: 959px) and (min-width: 600px) {
+    h2{
+        font-size: 22px;
+    }
+}
+ 
+@media all and (max-width: 599px) and (min-width: 320px) {
+    h2{
+        font-size: 18px;
+      }
+    }
+
+  </style>
+<div id="wrapper">
+<iframe width="560" height="315" src="//www.youtube.com/embed/ofeIMDr2CYw" frameborder="0" allowfullscreen></iframe>
+  <div id="message">
+    <h2>#EverybodyReady? Let's get out and vote!</h2>
+    </div> <!--message-->
+  <div id="stats">
+    <p>Automatically blast this message on <span class="bold">Tuesday</span></p>
+    </div> <!--stats-->
+  <div id="cta">
+    <a href=""><div class="button">
+        <center><%= render "/tweets/schedule_tweet" %></center>
+      </div></a> <!--button-->
+    </div> <!--cta-->
+  <div id="footer">
+    <p>We HATE SPAM and promise to keep your information secure.<br>Copyright 2014 - blast.social // All Rights Reserved</p>
+    </div> <!--footer-->
+
+</div> <!--wrapper-->
