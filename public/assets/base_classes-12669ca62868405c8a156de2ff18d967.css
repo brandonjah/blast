@@ -1,0 +1,20 @@
+/* line 1, /Users/brandonjahner/social_blast/app/assets/stylesheets/base_classes.css.scss */
+.dn {
+  display: none;
+}
+
+/* line 2, /Users/brandonjahner/social_blast/app/assets/stylesheets/base_classes.css.scss */
+.tac {
+  text-align: center;
+}
+
+/* line 4, /Users/brandonjahner/social_blast/app/assets/stylesheets/base_classes.css.scss */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 9, /Users/brandonjahner/social_blast/app/assets/stylesheets/base_classes.css.scss */
+.mt20 {
+  margin-top: 20px;
+}

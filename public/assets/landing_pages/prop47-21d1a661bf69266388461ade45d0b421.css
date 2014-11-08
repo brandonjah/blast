@@ -1,0 +1,304 @@
+/* line 1, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+/* line 7, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 12, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+body {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Open Sans', sans-serif;
+  color: #aeaeae;
+  overflow: hidden;
+  /* needed to eliminate scroll bars caused by the background image */
+  padding: 0;
+  margin: 0;
+  /* necessary for the raster to fill the screen */
+  height: 100%;
+  width: 100%;
+  background: gray url("/assets/prop47/bg.jpg") repeat-x left top;
+}
+
+/* line 25, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+a {
+  color: #0252aa;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 31, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 35, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+a img {
+  border: 0;
+}
+
+/* ---------- FUll WIDTH BACKGROUND ---------- */
+/* line 41, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+#bgimg {
+  position: absolute;
+  z-index: -1;
+}
+
+/* line 46, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.content-box {
+  width: 570px;
+  z-index: 2;
+  top: 0;
+  padding: 34px 0;
+  margin: 0 auto 0;
+}
+
+/* line 54, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.content-box.type2 {
+  padding-top: 108px;
+}
+
+/* line 58, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.content-box.type2 .blackbox form {
+  padding-top: 6px;
+}
+
+/* line 62, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+#logo {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 68, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+#logo img {
+  margin: 0 auto;
+  max-height: 100px;
+  max-width: 300px;
+}
+
+/* line 74, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.blackbox {
+  background: #233d53;
+  border-radius: 7px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+/* line 81, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.blackbox {
+  text-align: center;
+  padding-bottom: 17px;
+  padding-top: 17px;
+  margin-bottom: 11px;
+}
+
+/* line 89, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.blackbox h3,
+.blackbox h2 {
+  font-size: 28px;
+  line-height: 28px;
+  color: #fefefe;
+  font-weight: normal;
+  padding: 20px 30px;
+  overflow: hidden;
+}
+
+/* line 98, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.blackbox h3 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 30px;
+  padding: 12px 50px;
+  overflow: hidden;
+}
+
+/* line 106, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.blackbox p {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 30px;
+  overflow: hidden;
+  color: #a4d9ff;
+}
+
+/* line 114, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.blackbox #subtext {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* line 119, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.blackbox form {
+  padding: 10px 0 16px;
+}
+
+/* line 123, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.blackbox .field {
+  background-color: #fff;
+  font-size: 14px;
+  padding: 6px 10px;
+  border: 0;
+  width: 256px;
+  margin-bottom: 16px;
+}
+
+/* line 132, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.blackbox .field {
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+/* line 141, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.blackbox #optin-button {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  display: block;
+  background: #ffc600;
+  color: #fcfcfc;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  width: 395px;
+  height: 50px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  line-height: 49px;
+  margin: 0 auto;
+  padding: 5px 5px;
+  text-decoration: none;
+  overflow: hidden;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* line 163, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.blackbox #optin-button:hover {
+  background-color: #059edd;
+}
+
+/* line 167, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.footer {
+  color: #073051;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* line 173, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+.footer a {
+  color: #fafafa;
+}
+
+@media only screen and (max-width: 1300px) {
+  /* line 178, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  .content-box {
+    left: 45%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  /* line 184, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  .content-box {
+    left: 35%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 190, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  .content-box {
+    left: 28%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  /* line 196, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  .content-box {
+    left: 22%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 202, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  .content-box {
+    margin: 0 auto;
+    position: static;
+    max-width: 85%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  /* line 211, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  .content-box.type2 {
+    padding-top: 60px;
+  }
+
+  /* line 215, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  .blackbox h3 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  /* line 220, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  .blackbox .field {
+    width: 85%;
+  }
+
+  /* line 224, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  .blackbox #optin-button {
+    font-size: 20px;
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 340px) {
+  /* line 231, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  body {
+    font-size: 12px;
+  }
+
+  /* line 235, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  .content-box.type2 {
+    padding-top: 30px;
+  }
+
+  /* line 239, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  #logo img {
+    max-width: 210px;
+  }
+
+  /* line 243, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  .blackbox h3 {
+    font-size: 16px;
+    line-height: 21px;
+    padding: 12px 15px;
+  }
+
+  /* line 249, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  .blackbox .field {
+    width: 80%;
+  }
+
+  /* line 253, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  .blackbox #optin-button {
+    width: 80%;
+    font-size: 18px;
+  }
+
+  /* line 258, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  .blackbox p {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 8px 15px;
+  }
+
+  /* line 264, /Users/brandonjahner/social_blast/app/assets/stylesheets/landing_pages/prop47.css.scss */
+  .blackbox #subtext {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
