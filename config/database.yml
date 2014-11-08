@@ -26,7 +26,11 @@ development:
 
 staging:
   <<: *default
-  database: social_development  
+  database: social_development
+
+test:
+  <<: *default
+  database: social_test
 
 
 production:
