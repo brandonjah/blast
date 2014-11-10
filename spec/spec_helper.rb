@@ -15,14 +15,11 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-OmniAuth.config.test_mode = true
-OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
-  :provider => 'twitter',
-  :uid => '123545'
-  # etc.
-})
-
 RSpec.configure do |config|
+  # config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  # config.use_transactional_fixtures = true
+  # config.order = "random"
+  # config.infer_base_class_for_anonymous_controllers = false  
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin

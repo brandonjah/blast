@@ -3,6 +3,7 @@ ENV["RAILS_ENV"] ||= 'test'
 require 'spec_helper'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
+require 'capybara/rails'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -41,3 +42,27 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 end
+OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
+  :provider => 'twitter',
+  :uid => '123546'
+  # etc.
+})
+
+OmniAuth.config.test_mode = true
+
+  # OmniAuth.config.test_mode = true
+  # omniauth_hash = { 'provider' => 'twitter',
+  #                   'uid' => '12345',
+  #                   'info' => {
+  #                       'name' => 'natasha',
+  #                       'email' => 'hi@natashatherobot.com',
+  #                       'nickname' => 'NatashaTheRobot'
+  #                   },
+  #                   'extra' => {'raw_info' =>
+  #                                   { 'location' => 'San Francisco',
+  #                                     'gravatar_id' => '123456789'
+  #                                   }
+  #                   }
+  # }
+ 
+  # OmniAuth.config.add_mock(:twitter, omniauth_hash)

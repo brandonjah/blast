@@ -37,3 +37,10 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
+OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
+  :provider => 'twitter',
+  :uid => '123545'
+  # etc.
+})
+
+OmniAuth.config.test_mode = true
