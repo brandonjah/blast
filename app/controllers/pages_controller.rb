@@ -3,4 +3,7 @@ class PagesController < ApplicationController
 	def home
 		@contents = Content.all.to_a
 	end
+	
+	def privacy
+	end
 end
