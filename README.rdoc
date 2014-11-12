@@ -75,3 +75,7 @@ TO START WORKING LOCALLY:
 - git add --all (if you've added or removed files)
 - git commit -am "updating readme"
 - git push
+
+TO MAKE PROJECT EDITS:
+- assets > stylesheets > landing pages filename.css.scss
+- views > contents > name > filename.html.haml
