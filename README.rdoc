@@ -71,3 +71,6 @@ TO START WORKING LOCALLY:
 - start postgres
 - navigate to blast directory (cd blast)
 - enter "rails s"
+- git add --all (if you've added or removed files)
+- git commit -am "updating readme"
+- git push
