@@ -68,6 +68,7 @@ bundle exec rake db:migrate
 </pre>
 
 TO START WORKING LOCALLY:
+- git pull
 - start postgres
 - navigate to blast directory (cd blast)
 - enter "rails s"
