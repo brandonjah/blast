@@ -2,6 +2,8 @@
 	- content_for :head do
 		= stylesheet_link_tag "landing_pages/#{@content.name}", media: "all", "data-turbolinks-track" => true
 		= javascript_include_tag "landing_page"
+		%p#show_modal.dn
+			= @show_modal
 		#content
 			= render "/contents/name/#{@landing_page}"
 			%footer.col-xs-12
