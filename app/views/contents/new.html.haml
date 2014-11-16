@@ -1,7 +1,7 @@
 - if admin_user?
 	= simple_form_for @content do |f|
 		= f.input :name
-		= f.input :post
+		= f.input :post, input_html: { maxlength: 140 }
 		= f.input :post_time, as: :datetime
 		= f.button :submit
 - else

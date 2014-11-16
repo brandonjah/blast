@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
     end
     
     # client.update(tweet)
-    client.delay(run_at: tweet.content.post_time).update(tweet.content.post)
+    client.delay(run_at: tweet.content.post_time).update(tweet.message)
   end
 
   def self.when_to_run

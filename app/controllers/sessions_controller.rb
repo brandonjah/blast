@@ -3,7 +3,14 @@ class SessionsController < ApplicationController
     user = User.from_omniauth(env["omniauth.auth"])
     session[:user_id] = user.id
     # redirect_to root_url, notice: "Signed in!"
-    redirect_to request.env['omniauth.origin'] || root_url#, notice: "Signed in!"
+    if user.provider == "twitter"
+    	redirect_to request.env['omniauth.origin'] || root_url#, notice: "Signed in!"
+    elsif user.provider == "identity"
+    	redirect_to contents_url
+    else
+    	redirect_to root_url
+    end
+    		
   end
   
   def new
