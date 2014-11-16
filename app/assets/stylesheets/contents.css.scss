@@ -3,9 +3,13 @@
 }
 #send-tweet-modal .modal-body {
 	height: 300px;
-	padding: 30px;
+	padding: 0px 30px 10px 30px;
 }
 .simple_form div.tweet_message {
 	margin-left: 0px;
 	margin-right: 0px;
+}
+#tweet_message {
+	height: 60px;
+	max-height: 60px;
 }
