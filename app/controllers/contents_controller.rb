@@ -19,7 +19,7 @@ class ContentsController < ApplicationController
       @content = Content.new
     end
     @schedule_tweet_title = @content.name || "blast.social"
-    @schedule_tweet_post = @content.post || "Welcome to blast.social!"
+    @schedule_tweet_post = @tweet.message || "Welcome to blast.social!"
     @schedule_tweet_post_time = @content.pretty_date || ""
     render layout: "landing_page"
   end

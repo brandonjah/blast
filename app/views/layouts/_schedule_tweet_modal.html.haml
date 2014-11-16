@@ -6,12 +6,6 @@
         %h4.modal-title
           = "##{@schedule_tweet_title} via blast.social!"
       .modal-body
-        %h5 You are agreeing to send out a tweet using your account with this post content:
-        %p 
-          = @schedule_tweet_post
-        %h5 on this date and time:
-        %p 
-          = @schedule_tweet_post_time
-      .modal-footer
-        = render 'tweets/schedule_tweet_form' if current_user && !admin_user?
-        = link_to "Sign out", signout_path if admin_user?
+        .col-xs-10.row
+          = render 'tweets/schedule_tweet_form' if current_user && !admin_user?
+          = link_to "Sign out", signout_path if admin_user?
