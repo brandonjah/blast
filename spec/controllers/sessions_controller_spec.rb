@@ -1,11 +1,17 @@
 # sessions_controller_spec.rb
 require 'spec_helper'
 require 'rails_helper'
+require 'factory_girl_rails'
  
 describe SessionsController do
  
   before :each do
-    request.env['omniauth.auth'] = OmniAuth::AuthHash.new({ :provider => 'twitter', :uid => '1235456' })
+    # request.env['omniauth.auth'] = OmniAuth::AuthHash.new({ :provider => 'twitter', :uid => '1232354346', :name => 'something' })
+    request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:twitter]
+    # env = []
+    # puts request.env.class
+    # env["omniauth.auth"] = OmniAuth.config.mock_auth[:twitter]
+    OmniAuth.config.test_mode = true
   end
  
   describe "#create" do
@@ -15,8 +21,15 @@ describe SessionsController do
     #   expect {
     #     post :create
     #   }.to change{ User.count }.by(1)
+    puts request.env['omniauth.auth']
+
       user_count = User.count
+      puts user_count
+      # user = User.from_omniauth(env["omniauth.auth"])
+      # puts user.inspect
+      # user = create(:user)
       post :create
+      puts "current user: #{current_user.inspect}"
       expect(user_count).to be > User.count
     end
 
