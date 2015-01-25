@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.9'
+gem 'rails', '4.2'
 gem 'iconv'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
@@ -19,7 +19,8 @@ gem 'haml'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
-gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form', branch: 'master'
+# gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form', branch: 'master'
+gem 'simple_form'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -47,6 +48,7 @@ gem 'spring',        group: :development
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'factory_girl_rails'
+  gem 'web-console', '~> 2.0'
   # gem 'capybara'
 end
 
@@ -58,5 +60,4 @@ gem 'twitter', '~> 5.3.1'
 gem 'omniauth-identity'
 
 gem 'delayed_job_active_record'
-
-# gem "geocoder"
+gem 'metamagic'
