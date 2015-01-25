@@ -5,6 +5,8 @@
 http://blowfish.stage.staging.c66.me/
 http://bobcat.blast.c66.me/
 
+admin@socialblast.com
+
 <h4>run delayed jobs</h4>
 rake jobs:work
 
@@ -18,6 +20,7 @@ git push
 cx executable is in /usr/local/bin
 
 cx redeploy -s stage
+cx redeploy -s blast
 
 Usage: cx <command> [-s stack] [-e environment] [options] [arguments]
 
@@ -66,6 +69,9 @@ Run migration:
 cd $STACK_PATH
 bundle exec rake db:migrate
 </pre>
+
+View logs:
+cd $STACK_PATH/log/
 
 TO START WORKING LOCALLY:
 - git pull
