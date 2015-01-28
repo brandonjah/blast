@@ -58,7 +58,7 @@ Procfile in root of application starts the worker
 
 Connect to PSQL:
 <pre>
-cx ssh -s stage Blowfish
+cx ssh -s stage Blowfish ! no longer in existence
 cx ssh -s blast Bobcat
 sudo -u postgres psql
 </pre>
