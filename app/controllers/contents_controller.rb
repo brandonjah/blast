@@ -10,10 +10,10 @@ class ContentsController < ApplicationController
     if params[:landing_page]
       @landing_page = params[:landing_page]
       @content = Content.find_by(name: params[:landing_page])
-      p "inspect content: #{@content.inspect}"
-      p "content class: #{@content.class}"
+      puts "inspect content: #{@content.inspect}"
+      puts "content class: #{@content.class}"
       if @content.blank? 
-        @landing_page = "default"
+        @landing_page, params[:landing_page] = "default"
         @content = Content.find_by(name: @landing_page)
       end
     else
