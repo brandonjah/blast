@@ -20,6 +20,7 @@ class ContentsController < ApplicationController
       flash[:alert] = "Didn't find content"
       @content = Content.new
     end
+    p "@content.inspect #{@content.inspect}"
     @schedule_tweet_title = @content.name || "blast.social"
     @schedule_tweet_post = @tweet.message || "Welcome to blast.social!"
     @schedule_tweet_post_time = @content.pretty_date || ""
