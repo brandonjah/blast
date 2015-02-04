@@ -1,17 +1,24 @@
 <%
 meta twitter: {
-  card: "summary",
-  title: "card title",
-  description: "card description",
-  site: "blast.social"
+  card: "summary_large_image",
+  title: "Learn about #ThePurpleTapeFiles launch!",
+  description: "The announcement of #ThePurpleTapeFiles project will change the way you view music in film.",
+  site: "blast.social",
+  image: { src: "http://i.imgur.com/k0crUvR.jpg" }
 }
 %>
 <div id="wrapper" class="container col-xs-12">
 	<div class="col-xs-12 center row">
-		<center><%= image_tag 'onlybuilt4cubanlinx/k0crUvR.jpg', height: '300', width: '300' %></center>
+		<center>
+      <% if is_mobile_device? %>
+        <%= image_tag 'onlybuilt4cubanlinx/k0crUvR.jpg', height: '300', width: '400' %>
+      <% else %>
+        <%= image_tag 'onlybuilt4cubanlinx/k0crUvR.jpg', height: '600', width: '775' %>
+      <% end %>
+    </center>
 	</div>
   <div class="row col-xs-12 center">
-    <h2 class="tac">Connect with Twitter below and schedule your answer to be posted on launch day, Monday, February 2nd at 9AM EST  <a href="https://twitter.com/search?q=%23ThePurpleTapeFiles&amp;src=tyah">#ThePurpleTapeFiles</a>. <br><br>What #OnlyBuilt4CubanLinx tracks gotta be featured in #ThePurpleTapeFiles doc?</h2>
+    <h2 class="tac">Connect with Twitter below and schedule your answer to be posted on launch day, Monday, February 2nd at 9AM EST  <a href="https://twitter.com/search?q=%23ThePurpleTapeFiles&amp;src=tyah">#ThePurpleTapeFiles</a>. <br><br>Which #OnlyBuilt4CubanLinx track should be on #ThePurpleTapeFiles?</h2>
   </div> <!--message-->
   <div class="row col-xs-16 center ">
       <center><%= render "/tweets/schedule_tweet" %></center>

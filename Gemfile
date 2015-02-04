@@ -63,3 +63,4 @@ gem 'delayed_job_active_record'
 gem 'metamagic'
 #needed for rails 4.2
 gem 'responders', '~> 2.0'
+gem 'mobile-fu'

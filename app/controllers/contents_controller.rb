@@ -10,8 +10,6 @@ class ContentsController < ApplicationController
     if params[:landing_page]
       @landing_page = params[:landing_page]
       @content = Content.find_by(name: params[:landing_page])
-      puts "inspect content: #{@content.inspect}"
-      puts "content class: #{@content.class}"
       if @content.blank? 
         @landing_page, params[:landing_page] = "default"
         @content = Content.find_by(name: @landing_page)
@@ -20,7 +18,6 @@ class ContentsController < ApplicationController
       flash[:alert] = "Didn't find content"
       @content = Content.new
     end
-    p "@content.inspect #{@content.inspect}"
     @schedule_tweet_title = @content.name || "blast.social"
     @schedule_tweet_post = @tweet.message || "Welcome to blast.social!"
     @schedule_tweet_post_time = @content.pretty_date || ""

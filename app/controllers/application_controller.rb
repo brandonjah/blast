@@ -7,7 +7,9 @@ class ApplicationController < ActionController::Base
   helper_method :user_signed_in?
   helper_method :correct_user?
   helper_method :admin_user?
-
+  
+  has_mobile_fu false
+  
   private
     def current_user
       begin
