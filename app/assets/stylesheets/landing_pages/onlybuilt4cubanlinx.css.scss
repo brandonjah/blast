@@ -67,8 +67,9 @@
     background-color: #551a8b !important;
   }
 
-  .schedule_tweet_button, .modal-header, #launch_tweet_modal_button {
+  #schedule_tweet_button, .modal-header, #launch_tweet_modal_button {
     background-color: #551a8b !important;
+    border-color: #551a8b !important;
     color: #FFFFFF !important;
   }
 
@@ -89,4 +90,8 @@
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+  }
+  #mc_embed_signup_scroll .email, #mc-embedded-subscribe {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
