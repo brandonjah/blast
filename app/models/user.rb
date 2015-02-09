@@ -23,7 +23,11 @@ class User < ActiveRecord::Base
     end
     
     # client.update(tweet)
-    client.delay(run_at: tweet.content.post_time).update(tweet.message)
+    p tweet.content.post_time
+    p Time.zone.parse(tweet.content.post_time.to_s).utc.in_time_zone('Pacific Time (US & Canada)')
+    # ["run_at", "2015-02-07 23:02:00.000000"]?
+    # client.delay(run_at: tweet.content.post_time).update(tweet.message)
+    client.delay(run_at: Time.zone.parse(tweet.content.post_time.to_s).utc.in_time_zone('Pacific Time (US & Canada)')).update(tweet.message)
   end
 
   def self.when_to_run

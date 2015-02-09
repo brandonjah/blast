@@ -9,7 +9,7 @@ $(function(){
 	if($("#show_modal").text().trim() == "true") {
 		$('#send-tweet-modal').modal("show");
 	}
-	tm.keypress(function(){
+	tm.change(function(){
 		var new_text = $(this).val();
 		var combined = new_text+" "+content;
 		$("#combined_tweet").text(combined);

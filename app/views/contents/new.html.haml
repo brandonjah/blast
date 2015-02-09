@@ -1,8 +1,11 @@
 - if admin_user?
 	= simple_form_for @content do |f|
 		= f.input :name
+		= f.input :message_prompt
 		= f.input :post, input_html: { maxlength: 140 }
 		= f.input :post_time, as: :datetime
+		-# = f.input :timezone, collection: ActiveSupport::TimeZone.us_zones, as: :grouped_select, group_method: :name
+		= f.input :time_zone, priority: /US/
 		= f.button :submit
 - else
 	%h3 Sign in to create content	  
