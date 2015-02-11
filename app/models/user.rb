@@ -23,15 +23,6 @@ class User < ActiveRecord::Base
     end
     
     # client.update(tweet)
-    p "post time in user"
-    p tweet.content.post_time
-    p "time using in_time_zone"
-    p Time.zone.parse(tweet.content.post_time.to_s).utc.in_time_zone(tweet.content.time_zone)
-    p "use time zone"
-    p tweet.content.post_time.in_time_zone(tweet.content.time_zone)
-    p "in pacific time"
-    p tweet.content.post_time.in_time_zone("Pacific Time (US & Canada)")
-    # ["run_at", "2015-02-07 23:02:00.000000"]?
     # client.delay(run_at: tweet.content.post_time).update(tweet.message)
     client.delay(run_at: tweet.content.post_time.in_time_zone(tweet.content.time_zone)).update(tweet.message)
   end

@@ -32,11 +32,6 @@ class ContentsController < ApplicationController
     Time.zone = content_params[:time_zone]
   	@content = Content.new(content_params)
     # @content.post_time = Time.zone.parse(@content.post_time.to_s).utc.in_time_zone(content_params[:time_zone])
-    @content.post_time.getutc.in_time_zone "Pacific Time (US & Canada)"
-    p "trying this:"
-    p @content.post_time.getutc.in_time_zone "Pacific Time (US & Canada)"
-    p "zone;"
-    p @content.post_time.zone
     @content.post_time = @content.post_time.in_time_zone("Pacific Time (US & Canada)")
 
     if @content.save
