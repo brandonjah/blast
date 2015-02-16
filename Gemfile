@@ -55,6 +55,7 @@ gem 'pg'
 
 gem 'omniauth-twitter'
 gem 'twitter', '~> 5.3.1'
+gem 'koala'
 
 gem 'omniauth-identity'
 

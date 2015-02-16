@@ -16,5 +16,5 @@ $(function(){
 	});
 	$("#schedule_tweet_button").click(function(){
 		tm.val($("#combined_tweet").text().trim());
-	});
+	});	
 });
