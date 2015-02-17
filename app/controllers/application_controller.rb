@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
   helper_method :admin_user?
   
   has_mobile_fu false
+
+  def facebook_cookies
+    @facebook_cookies ||= Koala::Facebook::OAuth.new(ENV["BLAST_FACEBOOK_KEY"], ENV["BLAST_FACEBOOK_SECRET"]).get_user_info_from_cookie(cookies)
+  end
   
   private
     def current_user

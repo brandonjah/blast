@@ -7,9 +7,6 @@ Rails.application.routes.draw do
   match '/auth/:provider/callback' => 'sessions#create', :via => [:get,:post]
   match 'auth/failure', to: redirect('/'), :via => [:get, :post]
   match "/signout" => "sessions#destroy", :as => :signout, :via => [:get, :post]
-  get 'auth/facebook', as: "auth_provider"
-  get 'auth/facebook/callback', to: 'users#login'
-
 
   match "/privacy" => "pages#privacy", :as => :privacy, :via => :get
 

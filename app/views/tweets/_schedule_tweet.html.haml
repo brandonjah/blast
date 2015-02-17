@@ -12,5 +12,5 @@
 		%p
 			= link_to image_tag("twitter_sign_in.png", :border => 0, :alt => 'Sign in to Twitter', :title => ''), "/auth/twitter?origin=#{request.original_url}", :class => 'twitter-sign-in-button'
 		%p
-			%fb:login-button{:onlogin => "checkLoginState();", :scope => "email,publish_actions,user_about_me"}
+			%fb:login-button{:onlogin => "checkLoginState();", :scope => "email,publish_actions,user_about_me,public_profile"}
 		#status

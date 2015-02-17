@@ -21,8 +21,7 @@ class ContentsController < ApplicationController
     @schedule_tweet_title = @content.name || "blast.social"
     @schedule_tweet_post = @tweet.message || "Welcome to blast.social!"
     @schedule_tweet_post_time = @content.pretty_date || ""
-    @graph = Koala::Facebook::API.new('CAACEdEose0cBANO0VFbVNgWMZCTuvC2zMXnBftNweZCHnM95vr3zBXiGNsLnUdAuECCbSKsRROXSV4iiBbl37XlnuQ72fIxhH9vZAXcxfv5B8isDLlsu0Ti9ih7631kaVsxoWWtecL3ofEa5ZAQgvPoAiP6WYsW6pbLALFYAaMwSl41wZACgZBTdzvDsPAipws4hkbvFnZBHJyqLmgGKZCZCFZBRSBaua7cfwZD')
-    p @graph.inspect
+    # @graph = Koala::Facebook::API.new('CAACEdEose0cBANO0VFbVNgWMZCTuvC2zMXnBftNweZCHnM95vr3zBXiGNsLnUdAuECCbSKsRROXSV4iiBbl37XlnuQ72fIxhH9vZAXcxfv5B8isDLlsu0Ti9ih7631kaVsxoWWtecL3ofEa5ZAQgvPoAiP6WYsW6pbLALFYAaMwSl41wZACgZBTdzvDsPAipws4hkbvFnZBHJyqLmgGKZCZCFZBRSBaua7cfwZD')
     render layout: "landing_page"
   end
 

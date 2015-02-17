@@ -2,14 +2,21 @@ class User < ActiveRecord::Base
   has_many :tweets
 
   def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      %w[provider uid].each do |a|
-        user.send("#{a}=", auth.send("#{a}"))
+    p "auth in from from_omniauth; #{auth}"
+    if auth.provider == "twitter"
+      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+        %w[provider uid].each do |a|
+          user.send("#{a}=", auth.send("#{a}"))
+        end
+        user.name     = auth.info.name
+        user.oauth_token = auth.credentials.token
+        user.oauth_secret = auth.credentials.secret
+        user.save
       end
-      user.name     = auth.info.name
-      user.oauth_token = auth.credentials.token
-      user.oauth_secret = auth.credentials.secret
-      user.save
+    elsif auth.provider == "facebook"
+      access_token = auth['credentials']['token']
+      facebook = Koala::Facebook::API.new(access_token)
+      facebook.get_object("me?fields=name,email")
     end
   end
 
@@ -18,7 +25,6 @@ class User < ActiveRecord::Base
     facebook = Koala::Facebook::API.new(access_token)
     facebook.get_object("me?fields=name,email")
   end
-
 
   def send_tweet(tweet,uid)
     user = User.find_by(uid: uid)
