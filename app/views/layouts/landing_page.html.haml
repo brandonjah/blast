@@ -46,7 +46,7 @@
         if (response.status === 'connected') {
           // Logged into your app and Facebook.
           console.log("connected");
-          $.post( "/auth/facebook/callback", { data: response['authResponse']['accessToken'] });
+          $.post( "/auth/facebook/callback", { token: response['authResponse']['accessToken'] });
         } else if (response.status === 'not_authorized') {
           // The person is logged into Facebook, but not your app.
           document.getElementById('status').innerHTML = 'Please log ' +

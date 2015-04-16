@@ -7,5 +7,5 @@
           = "##{@schedule_tweet_title} via blast.social!"
       .modal-body
         .col-xs-10.row
-          = render 'tweets/schedule_tweet_form' if current_user && !admin_user?
+          = render 'tweets/schedule_tweet_form' if social_media_user? && !admin_user?
           = link_to "Sign out", signout_path if admin_user?

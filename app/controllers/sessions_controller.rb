@@ -3,8 +3,15 @@ class SessionsController < ApplicationController
     if params[:provider] == "facebook"
       # @user = User.koala(params['authResponse']['access_token'])
       # @access_token = facebook_cookies['access_token']
-      @graph = Koala::Facebook::GraphAPI.new(session_params[:data])
-      @graph.put_wall_post("test post")
+      user = User.koala(session_params[:token])
+      session[:facebook_user_id] = user.id
+      oauth = Koala::Facebook::OAuth.new(ENV["BLAST_FACEBOOK_KEY"], ENV["BLAST_FACEBOOK_SECRET"])
+      new_access_info = oauth.exchange_access_token_info session_params[:token]
+      new_access_token = new_access_info["access_token"]
+      user.oauth_token = new_access_token
+      user.save!
+      # @graph.put_wall_post("test post")
+      return render nothing: true
     else
       # puts "in create env: #{env.inspect} request: #{request.inspect}"
       user = User.from_omniauth(request.env["omniauth.auth"])
@@ -40,6 +47,6 @@ class SessionsController < ApplicationController
 	end
 
   def session_params
-    params.permit(:data)
+    params.permit(:token)
   end
 end

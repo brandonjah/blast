@@ -1,5 +1,5 @@
 %section.blast_dynamic_content
-	- if current_user
+	- if social_media_user?
 		%div
 			%button#launch_tweet_modal_button.btn.btn-primary.btn-lg{"data-target" => "#send-tweet-modal", "data-toggle" => "modal"}
 				Schedule Tweet

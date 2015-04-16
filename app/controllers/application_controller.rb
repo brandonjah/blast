@@ -4,7 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper_method :current_user
+  helper_method :current_facebook_user
   helper_method :user_signed_in?
+  helper_method :social_media_user?
   helper_method :correct_user?
   helper_method :admin_user?
   
@@ -23,6 +25,20 @@ class ApplicationController < ActionController::Base
       end
     end
 
+    def current_facebook_user
+      begin
+        @current_user ||= User.find(session[:facebook_user_id]) if session[:facebook_user_id]
+      rescue Exception => e
+        nil
+      end
+    end
+
+    def social_media_user?
+      if current_user || current_facebook_user
+        true
+      end
+    end    
+
     def user_signed_in?
       return true if current_user
     end
@@ -38,7 +54,7 @@ class ApplicationController < ActionController::Base
       if current_user
         current_user.provider == "identity" ? true : false
       end
-    end    
+    end
 
     def authenticate_user!
       if !current_user

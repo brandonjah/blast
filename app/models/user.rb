@@ -2,28 +2,27 @@ class User < ActiveRecord::Base
   has_many :tweets
 
   def self.from_omniauth(auth)
-    p "auth in from from_omniauth; #{auth}"
-    if auth.provider == "twitter"
-      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-        %w[provider uid].each do |a|
-          user.send("#{a}=", auth.send("#{a}"))
-        end
-        user.name     = auth.info.name
-        user.oauth_token = auth.credentials.token
-        user.oauth_secret = auth.credentials.secret
-        user.save
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      %w[provider uid].each do |a|
+        user.send("#{a}=", auth.send("#{a}"))
       end
-    elsif auth.provider == "facebook"
-      access_token = auth['credentials']['token']
-      facebook = Koala::Facebook::API.new(access_token)
-      facebook.get_object("me?fields=name,email")
+      user.name     = auth.info.name
+      user.oauth_token = auth.credentials.token
+      user.oauth_secret = auth.credentials.secret
+      user.save!
     end
   end
 
-  def self.koala(auth)
-    access_token = auth['token']
+  def self.koala(access_token)
+    # access_token = auth['token']
     facebook = Koala::Facebook::API.new(access_token)
-    facebook.get_object("me?fields=name,email")
+    auth = facebook.get_object("me?fields=name,email")
+    where(provider: "facebook", uid: auth['id']).first_or_create do |user|
+      user.name     = auth['name']
+      user.provider     = auth['provider']
+      user.id     = auth['id']
+      user.save!
+    end
   end
 
   def send_tweet(tweet,uid)
@@ -40,7 +39,11 @@ class User < ActiveRecord::Base
     client.delay(run_at: tweet.content.post_time.in_time_zone(tweet.content.time_zone)).update(tweet.message)
   end
 
-  def self.when_to_run
+  def post_to_facebook(post,uid)
+    user = User.find_by(uid: uid)
+    # get long lived token, save it on the user, then get @graph using this token
+    @graph = Koala::Facebook::API.new user.oauth_token
+    @graph.delay(run_at: post.content.post_time.in_time_zone(post.content.time_zone)).put_wall_post(post.message)
   end
   # handle_asynchronously :tweet, :run_at => Proc.new { 5.minutes.from_now }
   # handle_asynchronously :tweet, :run_at => Proc.new { when_to_run }

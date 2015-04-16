@@ -6,7 +6,7 @@ class ContentsController < ApplicationController
 
   def landing_page
     @tweet = Tweet.new
-    current_user ? @show_modal = true : @show_modal = false
+    current_user || current_facebook_user ? @show_modal = true : @show_modal = false
     if params[:landing_page]
       @landing_page = params[:landing_page]
       @content = Content.find_by(name: params[:landing_page])
